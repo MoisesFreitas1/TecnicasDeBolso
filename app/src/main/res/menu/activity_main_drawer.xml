@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Incidências de">
+        <menu>
+            <item
+                android:id="@+id/nav_cranio"
+                android:icon="@drawable/iconcranio"
+                android:title="Crânio" />
+            <item
+                android:id="@+id/nav_tronco"
+                android:icon="@drawable/icontorax"
+                android:title="Tronco" />
+            <item
+                android:id="@+id/nav_ms"
+                android:icon="@drawable/iconmao"
+                android:title="Membros Superiores" />
+            <item
+                android:id="@+id/nav_mi"
+                android:icon="@drawable/iconperna"
+                android:title="Membros Inferiores" />
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_abreviaturas"
+                android:icon="@drawable/tesoura"
+                android:title="Abreviaturas Operacionais" />
+            <item
+                android:id="@+id/nav_referencias"
+                android:icon="@drawable/livro"
+                android:title="Referências Bibliográficas" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REFERÊNCIAS BIBLIOGRÁFICAS"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bontrager"
+        android:text="BONTRAGER, K; LAMPIGNANO, J.P. Tratado de Posicionamento Radiográfico e Anatomia Associada - 8ª edição, Rio de Janeiro: Elsevier, 2015."
+        android:textColor="@android:color/black"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/leal"
+        android:text="LEAL, R. Posicionamentos e Imaginologia: Manual do estagiário - 1ª edição, São Paulo: Corpus, 2007."
+        android:textColor="@android:color/black"
+        android:padding="10dp"/>
+</LinearLayout>
