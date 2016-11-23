@@ -1,18 +1,14 @@
 package losfreitasapps.com.incidenciasradiologicas.Activities;
 
 import android.app.FragmentManager;
-import android.app.SearchManager;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import losfreitasapps.com.incidenciasradiologicas.Fragments.Abreviaturas;
@@ -58,17 +54,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-
-        return true;
-    }
-
-    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -96,6 +81,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             FM.beginTransaction().replace(R.id.content_principal, new FReferencias()).commit();
         } else if (id == R.id.nav_abreviaturas) {
             FM.beginTransaction().replace(R.id.content_principal, new Abreviaturas()).commit();
+        } else if (id == R.id.nav_share) {
+            Intent share = new Intent();
+            share.setAction(Intent.ACTION_SEND);
+            share.putExtra(Intent.EXTRA_SUBJECT, "Compartilhar");
+            share.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=losfreitasapps.com.incidenciasradiologicas");
+            share.setType("text/plain");
+            startActivity(share);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

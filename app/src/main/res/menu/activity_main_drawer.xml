@@ -27,6 +27,10 @@
                 android:icon="@drawable/tesoura"
                 android:title="Abreviaturas Operacionais" />
             <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Compartilhar" />
+            <item
                 android:id="@+id/nav_referencias"
                 android:icon="@drawable/livro"
                 android:title="Referências Bibliográficas" />
