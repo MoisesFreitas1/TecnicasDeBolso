@@ -17,6 +17,7 @@ import losfreitasapps.com.incidenciasradiologicas.Fragments.FMI;
 import losfreitasapps.com.incidenciasradiologicas.Fragments.FMS;
 import losfreitasapps.com.incidenciasradiologicas.Fragments.FReferencias;
 import losfreitasapps.com.incidenciasradiologicas.Fragments.FTronco;
+import losfreitasapps.com.incidenciasradiologicas.MainActivity2;
 import losfreitasapps.com.incidenciasradiologicas.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -88,6 +89,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             share.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=losfreitasapps.com.incidenciasradiologicas");
             share.setType("text/plain");
             startActivity(share);
+        } else if (id == R.id.nav_chat) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

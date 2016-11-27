@@ -23,6 +23,10 @@
     <item android:title="">
         <menu>
             <item
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/chat"
+                android:title="RadsApp" />
+            <item
                 android:id="@+id/nav_abreviaturas"
                 android:icon="@drawable/tesoura"
                 android:title="Abreviaturas Operacionais" />

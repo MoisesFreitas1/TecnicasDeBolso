@@ -7,4 +7,5 @@
     <string name="action_settings">Settings</string>
     <string name="search_title">Pesquisar</string>
     <string name="search_hint">Pesquisar</string>
+    <string name="title_activity_sendbird">RadChat</string>
 </resources>
